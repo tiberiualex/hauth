@@ -1,0 +1,59 @@
+name:                hauth
+version:             0.1.0.0
+github:              "tiberiualex/hauth"
+license:             BSD3
+author:              "Tiberiu Alexandru Butnaru"
+maintainer:          "example@example.com"
+copyright:           "2020"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/tiberiualex/hauth#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- classy-prelude
+- time
+- time-lens
+- pcre-heavy # sudo apt-get install libpcre3-dev (sudo apt-cache search pcre)
+- template-haskell
+
+default-extensions:
+- NoImplicitPrelude
+- OverloadedStrings
+- QuasiQuotes
+- TemplateHaskell
+
+library:
+  source-dirs: src
+
+executables:
+  hauth-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hauth
+
+tests:
+  hauth-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hauth
