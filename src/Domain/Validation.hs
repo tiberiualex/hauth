@@ -26,7 +26,7 @@ rangeBetween minRange maxRange msg val =
 
 -- Typeclass I'm not familiar with https://stackoverflow.com/questions/39634504/is-there-anything-we-lose-with-monofoldable
 -- https://hackage.haskell.org/package/mono-traversable-1.0.15.1/docs/Data-MonoTraversable.html#t:MonoFoldable
--- the MonoFoldable
+-- the MonoFoldable constraight here because the constraint of the length function from ClassyPrelude
 lengthBetween :: (MonoFoldable a) => Int -> Int -> e -> Validation e a
 lengthBetween minLen maxLen msg val =
   rangeBetween minLen maxLen msg (length val)
