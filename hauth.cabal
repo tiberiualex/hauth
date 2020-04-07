@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 99a12e7525fc9fd1aa78cfe54034d53d505cf23f362b78cd6b66e7d8030a4e22
+-- hash: a9dc3edac674e8555920709e1ed478c317d60150992f28e2a833758b6ca890e9
 
 name:           hauth
 version:        0.1.0.0
@@ -27,6 +27,8 @@ source-repository head
 
 library
   exposed-modules:
+      Domain.Auth
+      Domain.Validation
       Lib
   other-modules:
       Paths_hauth
