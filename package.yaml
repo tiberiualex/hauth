@@ -26,6 +26,7 @@ dependencies:
 - time-lens
 - pcre-heavy # sudo apt-get install libpcre3-dev (sudo apt-cache search pcre)
 - template-haskell
+- mtl
 
 default-extensions:
 - NoImplicitPrelude
